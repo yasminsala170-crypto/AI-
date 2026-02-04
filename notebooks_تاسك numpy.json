@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "2d2355b9-8a47-4df5-bbf1-f7e70410afab",
+      "cell_type": "code",
+      "source": "import numpy as np\n\narr1 = np.array([10, 20, 30, 40, 50])\nprint(arr1)\n\narr2 = np.arange(0, 21)\nprint(arr2)\n\narr3 = np.linspace(1, 5, 10)\nprint(arr3)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[10 20 30 40 50]\n[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]\n[1.         1.44444444 1.88888889 2.33333333 2.77777778 3.22222222\n 3.66666667 4.11111111 4.55555556 5.        ]\n"
+        }
+      ],
+      "execution_count": 31
+    },
+    {
+      "id": "6b67d777-a4d3-43db-9687-9f4326aa0721",
+      "cell_type": "code",
+      "source": "zeros_arr = np.zeros((3, 3))\nprint(zeros_arr)\n\nones_arr = np.ones((2, 4))\nprint(ones_arr)\n\nempty_arr = np.empty((2, 2))\nprint(empty_arr)\n\nidentity_arr = np.identity(3)\nprint(identity_arr)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "[[0. 0. 0.]\n [0. 0. 0.]\n [0. 0. 0.]]\n[[1. 1. 1. 1.]\n [1. 1. 1. 1.]]\n[[3. 4.]\n [6. 7.]]\n[[1. 0. 0.]\n [0. 1. 0.]\n [0. 0. 1.]]\n"
+        }
+      ],
+      "execution_count": 32
+    },
+    {
+      "id": "a0467789-77f0-46be-894e-416600b4a995",
+      "cell_type": "code",
+      "source": "print(arr1.shape)\nprint(arr2.shape)\nprint(arr3.shape)\n\narr2_new = np.arange(0, 20)\nreshaped_arr = arr2_new.reshape(4, 5)\nprint(reshaped_arr)\n",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "(5,)\n(21,)\n(10,)\n[[ 0  1  2  3  4]\n [ 5  6  7  8  9]\n [10 11 12 13 14]\n [15 16 17 18 19]]\n"
+        }
+      ],
+      "execution_count": 34
+    },
+    {
+      "id": "9136489e-889d-418b-8f9a-9f93b4d1e7eb",
+      "cell_type": "code",
+      "source": "print(arr1.dtype)\nprint(arr2.dtype)\nprint(arr3.dtype)\n\narr1_float = arr1.astype(float)\nprint(arr1_float)\n\nprint(arr1.mean())\nprint(reshaped_arr.mean(axis=1))\n\n\nimport numpy as np\nconditions = [\n    arr1 < 10,\n    (arr1 >= 10) & (arr1 <= 30),\n    arr1 > 30\n]\nchoices = [\"Low\", \"Medium\", \"High\"]\nclassified = np.select(conditions, choices, default=\"Unknown\")\n\nprint(\"Classified values for arr1:\")\nprint(classified)",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    },
+    {
+      "id": "3e5215ed-f5b7-4e87-9af1-4d0af8606829",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    },
+    {
+      "id": "fffeb1c6-44ba-4e80-bdec-2d502d2827f7",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
